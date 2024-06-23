@@ -68,6 +68,7 @@ const morgan = require('morgan');
 const path = require('path');
 const personalController = require('./backend/src/controllers/personal.controller');
 const turnosController = require('./backend/src/controllers/turnos.controller');
+const detalleTurnosController = require('./backend/src/controllers/detalleTurnos.controller');
 
 const app = express();
 const port = 3000;
@@ -91,6 +92,9 @@ app.get('/turnos', turnosController.getAllTurnos);
 app.get('/turnos/:id', turnosController.getTurnoById);
 app.put('/turnos/:id', turnosController.updateTurno);
 app.delete('/turnos/:id', turnosController.deleteTurno);
+
+// Rutas CRUD para detalleturnos
+app.post('/detalleTurnos', detalleTurnosController.createDetalleTurno);
 
 // Ruta para servir el archivo indexAdmin.html
 app.get('/', (req, res) => {

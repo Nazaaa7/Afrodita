@@ -16,13 +16,13 @@
 </div>
 <nav class="navbar bg-body-tertiary fixed-top ">
   <div class="container-fluid">
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand" href="/indexAdmin">
           <img src="/assets/img/logo.jpeg" alt="Bootstrap" width="60" height="60" id="logo">
         </a>
         <nav class=" navbar-expand-lg " id="nav"> 
         <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="indexAdmin.html">Inicio</a>
+            <a class="nav-link active" aria-current="page" href="/indexAdmin">Inicio</a>
           </li>
         
           <li class="nav-item dropdown">
@@ -30,10 +30,10 @@
               Carga de datos
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="altaPersonal.html">Personal</a></li>
-              <li><a class="dropdown-item" href="altaTurnos.html">Turnos </a></li>
+              <li><a class="dropdown-item" href="/altaPersonal">Personal</a></li>
+              <li><a class="dropdown-item" href="/altaTurnos">Turnos </a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="detalleTurnos.html">Detalle turnos</a></li>
+              <li><a class="dropdown-item" href="/detalleTurnos">Detalle turnos</a></li>
             </ul>
           </li>
           <li class="nav-item dropdown">
@@ -41,10 +41,10 @@
               Modificar datos
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="altaPersonal.html">Personal</a></li>
-              <li><a class="dropdown-item" href="altaTurnos.html">Turnos </a></li>
+              <li><a class="dropdown-item" href="/altaPersonal">Personal</a></li>
+              <li><a class="dropdown-item" href="/altaTurnos">Turnos </a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="detalleTurnos.html">Detalle turnos</a></li>
+              <li><a class="dropdown-item" href="/detalleTurnos">Detalle turnos</a></li>
             </ul>
           </li>
         </ul>
@@ -60,17 +60,17 @@
       <div class="offcanvas-body">
         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="indexAdmin.html">Inicio</a>
+            <a class="nav-link active" aria-current="page" href="/indexAdmin">Inicio</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Carga de datos
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="altaPersonal.html">Personal</a></li>
-              <li><a class="dropdown-item" href="altaTurnos.html">Turnos </a></li>
+              <li><a class="dropdown-item" href="/altaPersonal">Personal</a></li>
+              <li><a class="dropdown-item" href="/altaTurnos">Turnos </a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="detalleTurnos.html">Detalle turnos</a></li>
+              <li><a class="dropdown-item" href="/detalleTurnos">Detalle turnos</a></li>
             </ul>
           </li>
           <li class="nav-item dropdown">
@@ -78,10 +78,10 @@
               Modificar datos
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="altaPersonal.html">Personal</a></li>
-              <li><a class="dropdown-item" href="altaTurnos.html">Turnos </a></li>
+              <li><a class="dropdown-item" href="/altaPersonal">Personal</a></li>
+              <li><a class="dropdown-item" href="/altaTurnos">Turnos </a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="detalleTurnos.html">Detalle turnos</a></li>
+              <li><a class="dropdown-item" href="/detalleTurnos">Detalle turnos</a></li>
             </ul>
           </li>
         </ul>
@@ -92,20 +92,20 @@
 
 
       <div class="form-container">
-        <form>
+        <form id="detalleTurnos-form">
           <h2 style="color: black; margin-left: 30px;">Detalle turnos</h2>
           <div class="input-row">
               <div class="input-group">
-                  <label for="turno">IdTurno</label>
-                  <input type="text" id="turno" name="turno" placeholder="1">
+                  <label for="idTurno">idTurno</label>
+                  <input type="number" id="idTurno" name="idTurno" placeholder="1">
               </div>
               <div class="input-group">
-                  <label for="insumo">Insumo</label>
-                  <input type="text" id="insumo" name="insumo" placeholder="Polygel">
+                  <label for="idInsumo">idInsumo</label>
+                  <input type="number" id="idInsumo" name="idInsumo" placeholder="Polygel">
               </div>
               <div class="input-group">
                 <label for="insumoCant">Cantidad</label>
-                <input type="text" id="insumoCant" name="insumoCant" placeholder="1/2">
+                <input type="number" id="insumoCant" name="insumoCant" placeholder="1/2">
             </div>
           </div>
       
@@ -117,21 +117,7 @@
       </div>
         </form>
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="./assets/js/detalleTurno.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
