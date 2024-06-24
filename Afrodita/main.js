@@ -100,7 +100,10 @@ app.post('/detalleTurnos', detalleTurnosController.createDetalleTurno);
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'client', 'indexAdmin.html'));
 });
-
+// Ruta para servir el archivo indexAdmin.html
+app.get('/empleados', (req, res) => {
+    res.sendFile(path.join(__dirname, 'client', 'indexEmpleado.html'));
+});
 // Ruta para servir el archivo altaPersonal.html
 app.get('/altaPersonal', (req, res) => {
     res.sendFile(path.join(__dirname, 'client', 'altaPersonal.html'));

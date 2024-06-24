@@ -41,7 +41,7 @@ const getPersonalById = async (req, res) => {
     if (results.length > 0) {
       res.json(results[0]);
     } else {
-      res.status(404).send('Personal record not found');
+      res.status(404).send('registro del personal no enconrado');
     }
     await connection.end();
   } catch (err) {
